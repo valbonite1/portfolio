@@ -20,24 +20,24 @@
       transition: opacity 150ms linear;
   }
   
-  html{
+  html, body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    height: 100%;
+    width: 100%;
 }
 
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 a:visited {
     color: inherit;
-}
-
-body {
-    margin: 0;
-    padding: 0;
 }
 
 :root {
@@ -47,9 +47,17 @@ body {
     --text-secondary: #ececec;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
+    --font-cyan: #00cce7;
     --transition-speed: 600ms;
+    --dark-grey: #0e0e0e; ;
+    --less-grey: #181818;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 
   

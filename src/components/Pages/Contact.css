@@ -1,41 +1,27 @@
-:root {
-    font-size: 16px;
-    font-family: 'Roboto', 'Sans-Serif';
-    --text-primary: #eeeeee;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
-    --transition-speed: 600ms;
-    --btn-dark: #0b2338;
-    --btn-light:  #133e63;
-    --btn-blue:  #00cce7;
-}
-
 .contact-container {
-    margin-left: 4rem;
-    position: fixed;
+    padding-top: 4rem;
+    background-color: var(--less-grey);
+    height: 100%;
     visibility: hidden;
     width: 100%;
-    background:#181818;
-    height: 100vh;
 }
 
 .contact-wrapper {
     display: flex;
-    width: 100%;
-    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    
 }
 
 .form-container {
-    margin-top: 50px;
-    width: 300px;
-    height: 500px;
     background-color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px;
-
+    justify-content: center;
+    width: 100%;
+    padding: 4rem 0;
+    height: 100%;
 }
 
 .form-header {
@@ -62,7 +48,7 @@
 }
 
 .input-wrap {
-    width: 300px;
+    width: 80%;
     margin: 0 0 25px 0;
 }
 
@@ -70,11 +56,10 @@
     width: 100%;
     border: none;
     background-color: rgb(85, 85, 85);
-    padding: 0 0 0 5px;
     color: #fff;
-    font-family: 'Roboto', 'Sans-Serif';
     font-size: 0.8rem;
     font-weight: 100;
+    
 }
 
 .input-wrap {
@@ -84,7 +69,7 @@
 }
 
 .input-control {
-    height: 25px;
+    height: 40px;
 }
 
 .btn-submit {
@@ -106,13 +91,47 @@
 }
 
 .svg-container {
-    margin-top: 50px;
-    width: 700px;
-    height: 500px;
-    background-color: rgb(32, 32, 32);
-    display: flex;
-    align-items: center;
-    padding: 25px;
-    z-index: 10; 
-    margin-right: 60px;
+    display: none;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .contact-container {
+        padding-top: 0;
+        padding-left: 4rem;
+        position: fixed;
+    }
+    .svg-container {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        padding: 0 2rem;
+        align-items: center;
+    }
+
+    .form-image {
+        width: 100%;
+        height: 100%;
+        padding: 0 5rem 0 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-wrapper {
+        flex-direction: row;
+
+    }
+    
+    .form-container {
+        width: 50%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .form-image > img {
+        width: 100%;
+    }
+
+    
 }

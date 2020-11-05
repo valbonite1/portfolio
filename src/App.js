@@ -5,13 +5,14 @@ import About from './components/Pages/About';
 import Skills from './components/Pages/Skills';
 import Project from './components/Pages/Project';
 import Contact from './components/Pages/Contact';
+import HomePage from './components/Pages/HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL + '/'}>
       <div>
         <Navbar />
         <Route render={({location}) => (
@@ -22,7 +23,7 @@ function App() {
             className="fade"
           >
             <Switch>
-              <Route path="/portfolio-deploy-v3" exact component={HeroSection} />
+              <Route path="/" exact component={HeroSection} />
               <Route path="/about" component={About} />
               <Route path="/skills" component={Skills} />
               <Route path="/project" component={Project} />

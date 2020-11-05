@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './About.css';
-import gradpic from '../../public/img/BONITE.png';
+import gradpic from '../../public/img/BONITE.jpg';
 import { TweenMax, TimelineLite, Power3 } from 'gsap';
 
 

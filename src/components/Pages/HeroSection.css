@@ -1,70 +1,101 @@
 .hero-container {
-    margin-left: 4rem;
-    position: fixed;
+    padding-top: 4rem;
+    background-color: var(--less-grey);
+    height: 100%;
     visibility: hidden;
     width: 100%;
-    background:#181818;
-    
 }
 
-
-.heading-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    margin-top: 190px;
-    margin-left: 110px;
+.heading{
+    padding: 10rem 3rem;
 
 }
 
-.heading {
-    margin-bottom: 25px;
-}
-
-.heading .heading-text {
-    padding: 0;
-    margin: 0;
-    font-size: 5rem;
-    line-height: 0.8;
-    color: #fff;
+.heading-text {
+    font-size: 4rem;
     font-weight: 100;
-
-}
-
-.heading .heading-desc {
     color: #fff;
-    font-size: .8rem;
+    margin: 0;
 }
 
-.heading .heading-text .hi-lite {
-    color: #00cce7;
+.hi-lite {
+    color: var(--font-cyan);
 }
 
-.logo-container {
-    position: absolute;
-    left: 625px;
-    top: 75px;
+.heading-desc {
+    color: #fff;
+    margin: 0;
+    font-weight: 100;
+    margin-bottom: 2rem;
 }
 
-.logo-img {
-    width: 500px;
+
+.btn-contact {
+    margin-right: 25px;
+    margin-bottom: 15px;
 }
+
 
 .svg-hero {
-    
-    position: absolute;
-    z-index: 1;
-    left: 600px;
-    top: 60px;
+    display: none;
+
 }
 
-@media only screen and (max-width: 768px) {
-    .hero-container {
-        margin-left: 0;
-        margin-top: 4rem;
-        width: 100vw;
+
+
+@media only screen and (min-width: 768px) {
+    .svg-hero {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        align-items: center;
+        padding: 0 2rem;
     }
 
+    .hero-container {
+        padding-left: 4rem;
+        padding-top: 0;
+        position: fixed;
+    }
+
+    .heading-container {
+        display: flex;
+        padding-top: 0;
+        align-items: center;
+        height: 100%;
+        
+    }
+
+    .heading {
+        width: 50%;
+        padding-right: 0;
+    }
+
+    .heading-text {
+        font-size: 4rem;
+    }
+
+    .heading-desc {
+        font-size: 1rem;
+    }
+
+    
 }
 
+@media only screen and (min-width: 900px) {
+    .heading {
+        padding-left: 5rem;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .heading-text {
+        font-size: 5rem;
+        
+    }
+
+    .heading-desc {
+        font-size: 1.2rem;
+    }
+}
 

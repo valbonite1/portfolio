@@ -36,33 +36,33 @@ let icons = useRef(null);
                     <p className="text-desc">My area of proficiency is front-end development.</p>
                     <p className="text-desc">I am knowledgeable in HTML5, CSS3, Bootstrap, and Javascirpt. I use React JS as my Javascript framework.</p>
                     <p className="text-desc">I use Npm as my package manager and git/Github for version control.</p>
-                    <p className="text-desc">I have basic knowledge of Node JS, used as a basic server side environment.</p>
+                    <p className="text-desc">I have basic knowledge in Node JS, used as a basic server side environment.</p>
                 </div>
                 <div className="skill-icon-container" ref={el => icons = el}>
-                    <div className="skill-icons">
-                        <div className="icon">
-                            <FaIcons.FaHtml5 />
+                    <div className="icon-wrapper">
+                        <div className="icon-cube">
+                            <FaIcons.FaHtml5 className="icon"/>
                         </div>
-                        <div className="icon ">
-                            <IoIcons.IoLogoCss3 />
+                        <div className="icon-cube ">
+                            <IoIcons.IoLogoCss3 className="icon" />
                         </div>
-                        <div className="icon">
-                            <SiIcons.SiBootstrap />
+                        <div className="icon-cube">
+                            <SiIcons.SiBootstrap className="icon" />
                         </div>
-                        <div className="icon">
-                            <SiIcons.SiJavascript />
+                        <div className="icon-cube">
+                            <SiIcons.SiJavascript className="icon" />
                         </div>
-                        <div className="icon">
-                            <FaIcons.FaNode />
+                        <div className="icon-cube">
+                            <FaIcons.FaNode className="icon" />
                         </div>
-                        <div className="icon">
-                            <FaIcons.FaReact />
+                        <div className="icon-cube">
+                            <FaIcons.FaReact  className="icon"/>
                         </div>
-                        <div className="icon">
-                            <FaIcons.FaGithub />
+                        <div className="icon-cube">
+                            <FaIcons.FaGithub  className="icon"/>
                         </div>
-                        <div className="icon">
-                            <FaIcons.FaNpm />
+                        <div className="icon-cube">
+                            <FaIcons.FaNpm className="icon" />
                         </div>
                     </div>
                 </div>

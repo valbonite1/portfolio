@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Navbar.css';
 import logo from '../../public/img/white-logo.png';
 import { TweenMax } from 'gsap';
@@ -11,36 +11,56 @@ import * as ImIcons from 'react-icons/im';
 
 function Navbar() {
 
-let nav = useRef(null);
+  const [click, setClick] = useState(false);
 
-  useEffect(() => {
+  const handleClick = () => setClick(!click);
+  const closeMobMenu = () => setClick(false);
 
-    TweenMax.to(nav, 0, {css: {visibility: 'visible'}});
-  })
+ let nav = useRef(null);
+ 
+   useEffect(() => {
+
+    TweenMax.to(nav, 0, {css: {visibility: 'visible'}}); 
+   }) 
 
     return (
           <div >
             <nav className="navbar" ref={el => nav = el} >
-              <ul className="navbar-nav" id="menu">
-                  <Link to="/portfolio-deploy-v3" className="nav-link">
-                    <li className="nav-item"><img src={logo} className="logo"/></li>
+                  <Link to="/" className="nav-link">           {/* child */}
+                    <img src={logo} className="logo"/>
                   </Link>
-                  <Link to="/portfolio-deploy-v3" className="nav-link">
-                    <li className="nav-item"><AiIcons.AiOutlineHome className="icons"/><span className="link-text">HOME</span></li>
-                  </Link>
-                  <Link to="/about" className="nav-link">
-                    <li className="nav-item"><BsIcons.BsPerson className="icons" /><span className="link-text">ABOUT</span></li>
-                  </Link>
-                  <Link to="/skills" className="nav-link">
-                    <li className="nav-item"><ImIcons.ImStack className="icons" /><span className="link-text">SKILLS</span></li>
-                  </Link>
-                  <Link to="/project" className="nav-link">
-                    <li className="nav-item"><BiIcons.BiBookBookmark className="icons" /><span className="link-text">PROJECTS</span></li>
-                  </Link>
-                  <Link to="/contact" className="nav-link">
-                    <li className="nav-item"><RiIcons.RiContactsLine className="icons contact-icon" /><span className="link-text">CONTACT</span></li>
-                  </Link>
-              </ul>
+                  <div className="menu" onClick={handleClick}> {/* child */}
+                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                  </div>
+                <div className={click ? 'navbar-nav active' : 'navbar-nav'}>   
+                  <ul className="navbar-nav-container"> 
+                      <li className="nav-item">            
+                        <Link to="/" className="nav-link" onClick={closeMobMenu}>
+                          <AiIcons.AiOutlineHome className="icons"/><span className="link-text">HOME</span>
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link to="/about" className="nav-link" onClick={closeMobMenu}>
+                          <BsIcons.BsPerson className="icons" /><span className="link-text">ABOUT</span>
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link to="/skills" className="nav-link" onClick={closeMobMenu}>
+                          <ImIcons.ImStack className="icons" /><span className="link-text">SKILLS</span>
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link to="/project" className="nav-link" onClick={closeMobMenu}>
+                          <BiIcons.BiBookBookmark className="icons" /><span className="link-text">PROJECTS</span>
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link to="/contact" className="nav-link" onClick={closeMobMenu}>
+                          <RiIcons.RiContactsLine className="icons contact-icon" /><span className="link-text">CONTACT</span>
+                        </Link>
+                      </li>
+                  </ul>
+                </div>
             </nav>
           </div>
     )

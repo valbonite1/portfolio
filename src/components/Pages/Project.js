@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Project.css';
 import { TweenMax, TimelineLite, Power3 } from 'gsap';
-import loadImg from '../../public/img/loading-projects.png';
+import loadImg from '../../public/img/loading-project.png';
 
 function Project() {
 
@@ -31,7 +31,7 @@ function Project() {
                 </div>
                 <div className="load-wrapper"  ref={el => loadText = el}>
                     <div className="wrapper">
-                        <h1 className="loading-text">Processing...<span>&nbsp;</span></h1>
+                        <h1 className="loading-text">Under Construction...<span>&nbsp;</span></h1>
                     </div>
                 </div>
             </div>
